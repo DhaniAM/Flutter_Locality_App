@@ -1,11 +1,11 @@
-class MerchantList {
+class Merchant {
   String name, overview, openTime;
   double rating;
   List<String> location, contact, avaibility, img;
   Set<String> tag;
   Map<String, String> menu;
 
-  MerchantList({
+  Merchant({
     this.name = 'nama-merchant',
     this.overview = 'penjelasan-singkat-merchant',
     this.openTime = 'jam-buka-merchant',
@@ -19,8 +19,8 @@ class MerchantList {
   });
 }
 
-List<MerchantList> merchant = [
-  MerchantList(
+List<Merchant> merchantList = [
+  Merchant(
     name: 'Janji Jiwa',
     overview:
         'Merek kopi yang berada dalam naungan Lunara Brands ini memang sudah melekat di hati para pelanggan setianya. Dengan mengusung konsep fresh-to-cup, Janji Jiwa menyajikan berbagai varian kopi maupun non-kopi.',
@@ -45,7 +45,7 @@ List<MerchantList> merchant = [
       'Peach Tea Machiato': '17.000'
     },
   ),
-  MerchantList(
+  Merchant(
     name: 'Gulu Gulu',
     overview:
         'Selain kopi, belakangan ini minuman boba juga naik daun dan sepertinya tidak turun-turun hingga waktu yang cukup lama. Cita rasa minuman boba yang manis-manis segar dipadukan dengan cheese foam gurih memang menjuarai banyak hati konsumen, nih.',
@@ -63,7 +63,7 @@ List<MerchantList> merchant = [
       'Brown Slurpy Bobba Fresh Milk': '19.000'
     },
   ),
-  MerchantList(
+  Merchant(
     name: 'Kopi Soe',
     overview:
         "Sepertinya tidak ada yah, yang tidak mengenal salah satu pelopor minuman susu rum regal yang satu ini. Kopi Soe merupakan salah satu brand waralaba minuman kekinian kopi yang baru berdiri pada tahun 2018, namun masih terus hype di kalangan pecinta kopi. Kopi Soe menggunakan nama-nama khas ‘Soe’ dalam berbagai menu yang dijual, seperti Soerum Regal, Yuzu SoeSoe, Soe Le, dan sebagainya.",
@@ -85,7 +85,7 @@ List<MerchantList> merchant = [
       'Es Roegal (Rum Regal)': '24.000'
     },
   ),
-  MerchantList(
+  Merchant(
       name: 'Kopi Yor',
       overview:
           'Kopi Yor, bila Anda mencoba membacanya dengan cepat mungkin akan terdengar seperti ‘Kopyor’ ,yah. Kebetulan sekali, mereka juga menjual produk varian kopi yang dipadukan dengan kopyor, lho.',
@@ -104,7 +104,7 @@ List<MerchantList> merchant = [
         'Es Kopi Buco': '23.000',
         'Ameribuco': '24.000'
       }),
-  MerchantList(
+  Merchant(
     name: 'Xiboba',
     overview:
         'Xiboba adalah sebuah brand yang menyajikan minuman boba (Bubble Tea) untuk seluruh masyarakat Indonesia. Terinspirasi dari kata “Xi Yue” yang berarti Kebahagiaan, Xiboba hadir dengan tujuan membawa kebahagiaan kepada setiap orang yang meminumnya melalui rasa yang khas.',

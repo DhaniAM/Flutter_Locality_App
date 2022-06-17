@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'bottom_nav.dart';
-import 'home_page.dart';
+import 'Bottom_Nav.dart';
+import 'Home_Page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.deepOrange,
       ),
       home: Scaffold(
-        appBar: AppBar(title: const Text('Prramming Languages')),
+        appBar: AppBar(title: const Text('Merchant Lokal')),
         body: const HomePage(),
         bottomNavigationBar: const BottomNav(),
       ),

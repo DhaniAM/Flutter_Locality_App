@@ -1,8 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_2/merchant_list.dart';
+import 'package:flutter_project_2/Merchant.dart';
 
 class MerchantCard extends StatelessWidget {
-  const MerchantCard({Key? key}) : super(key: key);
+  Merchant merchant;
+  BuildContext context;
+  int index;
+
+  MerchantCard(
+      {Key? key,
+      required this.merchant,
+      required this.context,
+      required this.index})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,11 +37,10 @@ class MerchantCard extends StatelessWidget {
                   color: Colors.white,
                 ),
               ),
-              // color: Colors.white,
               padding: const EdgeInsets.all(5),
               child: Image.asset(
-                'img/C.png',
-                height: 100,
+                merchant.img[0],
+                width: 100,
               ),
             ),
             // Text
@@ -40,12 +48,39 @@ class MerchantCard extends StatelessWidget {
               padding: const EdgeInsets.only(left: 20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const <Widget>[
+                children: <Widget>[
                   Text(
-                    'C',
-                    style: TextStyle(fontSize: 40),
+                    merchant.name,
+                    style: const TextStyle(fontSize: 30),
                   ),
-                  Text('since 1972'),
+                  Row(
+                    children: <Widget>[
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(25),
+                          color: Colors.yellow,
+                        ),
+                        margin: const EdgeInsets.only(top: 10, left: 10),
+                        padding: const EdgeInsets.all(5),
+                        child: Text(merchant.tag.elementAt(0),
+                            style: TextStyle(
+                              fontSize: 12,
+                            )),
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(25),
+                          color: Colors.yellow,
+                        ),
+                        margin: const EdgeInsets.only(top: 10, left: 10),
+                        padding: const EdgeInsets.all(5),
+                        child: Text(merchant.tag.elementAt(1),
+                            style: TextStyle(
+                              fontSize: 12,
+                            )),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),
