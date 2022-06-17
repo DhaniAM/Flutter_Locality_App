@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'bottom_nav.dart';
-import 'home_menu.dart';
+import 'home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,8 +20,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.deepOrange,
       ),
       home: Scaffold(
-        appBar: AppBar(title: const Text('Programming Languages')),
-        body: const HomeMenu(),
+        appBar: AppBar(title: const Text('Prramming Languages')),
+        body: const HomePage(),
         bottomNavigationBar: const BottomNav(),
       ),
     );
