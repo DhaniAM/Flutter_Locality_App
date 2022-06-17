@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project_2/merchant_list.dart';
 
 class MerchantCard extends StatelessWidget {
   const MerchantCard({Key? key}) : super(key: key);

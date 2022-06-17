@@ -1,7 +1,7 @@
 class MerchantList {
   String name, overview, openTime;
   double rating;
-  List<String> location, contact, avaibility;
+  List<String> location, contact, avaibility, img;
   Set<String> tag;
   Map<String, String> menu;
 
@@ -13,6 +13,7 @@ class MerchantList {
     this.location = const ['lokasi-merchant', 'link-to-location'],
     this.contact = const ['kontak-merchant-1', 'kontak-merchant-2'],
     this.avaibility = const ['gojek', 'grab', 'shopeefood'],
+    this.img = const ['img1-merchant', 'img2-merchant'],
     this.tag = const {'tag1', 'tag2', 'tag3'},
     this.menu = const {'item1': '0', 'item2': '1', 'item3': '2'},
   });
@@ -32,6 +33,7 @@ List<MerchantList> merchant = [
       'https://twitter.com/janjijiwaid'
     ],
     avaibility: ['Gojek', 'Grab', 'Shopeefood'],
+    img: ['img/janji-jiwa1.jpg', 'img/janji-jiwa2.jpg', 'img/janji-jiwa3.jpg'],
     rating: 9.5,
     tag: {'Minuman', 'Coffee', 'Tea'},
     menu: {
@@ -51,6 +53,7 @@ List<MerchantList> merchant = [
     location: ['Duta Mall Banjarmasin, lantai 5'],
     contact: ['https://www.instagram.com/guluguluid/'],
     avaibility: ['Gojek', 'Grab', 'Shopeefood'],
+    img: ['img/gulu-gulu1.jpg', 'img/gulu-gulu2.jpg', 'img/gulu-gulu3.jpg'],
     rating: 8.5,
     tag: {'Minuman', 'Cheese Tea', 'Boba'},
     menu: {
@@ -71,6 +74,7 @@ List<MerchantList> merchant = [
       'https://www.instagram.com/kopisoe'
     ],
     avaibility: ['Gojek', 'Grab', 'Shopeefood'],
+    img: ['img/kopi-soe1.jpg', 'img/kopi-soe2.jpg', 'img/kopi-soe3.jpeg'],
     rating: 8.0,
     tag: {'Minuman', 'Regal', 'Coffee'},
     menu: {
@@ -89,6 +93,7 @@ List<MerchantList> merchant = [
       location: ['Jl. Haryono M.T No. 49 Banjarmasin Tengah'],
       contact: ['https://kopiyor.com/', 'https://www.instagram.com/kopiyor/'],
       avaibility: ['Gojek', 'Grab', 'Shopeefood'],
+      img: ['img/kopi-yor1.webp', 'img/kopi-yor2.jpg', 'img/kopi-yor3.jpeg'],
       rating: 8.5,
       tag: {'Minuman', 'Kopyor', 'Coffee'},
       menu: {
@@ -110,6 +115,7 @@ List<MerchantList> merchant = [
       'https://www.instagram.com/xiboba.indonesia/'
     ],
     avaibility: ['Gojek', 'Grab', 'Shopeefood'],
+    img: ['img/xiboba1.webp', 'img/xiboba2.jpg', 'img/xiboba3.jpg'],
     rating: 9.5,
     tag: {'Minuman', 'Boba', 'Brown Sugar'},
     menu: {
