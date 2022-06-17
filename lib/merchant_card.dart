@@ -1,22 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_2/Merchant.dart';
+import 'package:flutter_project_2/merchant.dart';
+import 'package:flutter_project_2/tag_card.dart';
 
 class MerchantCard extends StatelessWidget {
-  Merchant merchant;
-  BuildContext context;
-  int index;
+  final Merchant merchant;
+  final BuildContext context;
 
-  MerchantCard(
-      {Key? key,
-      required this.merchant,
-      required this.context,
-      required this.index})
-      : super(key: key);
+  const MerchantCard({
+    Key? key,
+    required this.merchant,
+    required this.context,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    int tagLength = merchant.tag.length;
     return Container(
-      margin: const EdgeInsets.all(10),
+      margin: const EdgeInsets.all(8),
+      // Each merchant on home page
       child: Card(
         shadowColor: Colors.blue,
         color: const Color(0xFFFFAD43),
@@ -40,46 +41,34 @@ class MerchantCard extends StatelessWidget {
               padding: const EdgeInsets.all(5),
               child: Image.asset(
                 merchant.img[0],
-                width: 100,
+                height: 100,
               ),
             ),
-            // Text
-            Padding(
+
+            /// Merchant Name and Tag
+            Container(
               padding: const EdgeInsets.only(left: 20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
+                  /// Merchant name
                   Text(
                     merchant.name,
                     style: const TextStyle(fontSize: 30),
                   ),
-                  Row(
-                    children: <Widget>[
-                      Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(25),
-                          color: Colors.yellow,
-                        ),
-                        margin: const EdgeInsets.only(top: 10, left: 10),
-                        padding: const EdgeInsets.all(5),
-                        child: Text(merchant.tag.elementAt(0),
-                            style: TextStyle(
-                              fontSize: 12,
-                            )),
-                      ),
-                      Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(25),
-                          color: Colors.yellow,
-                        ),
-                        margin: const EdgeInsets.only(top: 10, left: 10),
-                        padding: const EdgeInsets.all(5),
-                        child: Text(merchant.tag.elementAt(1),
-                            style: TextStyle(
-                              fontSize: 12,
-                            )),
-                      ),
-                    ],
+
+                  /// Tag
+                  SizedBox(
+                    width: 224,
+                    child: Wrap(
+                      children: <Widget>[
+                        for (int i = 0; i < tagLength; i++)
+                          TagCard(
+                            merchant: merchant,
+                            index: i,
+                          ),
+                      ],
+                    ),
                   ),
                 ],
               ),

@@ -35,14 +35,15 @@ List<Merchant> merchantList = [
     avaibility: ['Gojek', 'Grab', 'Shopeefood'],
     img: ['img/janji-jiwa1.jpg', 'img/janji-jiwa2.jpg', 'img/janji-jiwa3.jpg'],
     rating: 9.5,
-    tag: {'Minuman', 'Coffee', 'Tea'},
+    tag: {'Minuman', 'Coffee', 'Tea', 'Toast'},
     menu: {
       'Latte': '20.000',
       'Kopi Hitam Manis': '15.000',
       'Kopi Soklat': '23.000',
       'Kopi Pandan': '23.000',
       'Black Tea Machiato': '15.000',
-      'Peach Tea Machiato': '17.000'
+      'Peach Tea Machiato': '17.000',
+      'Ham and Cheese Toast': '32.000',
     },
   ),
   Merchant(
@@ -115,7 +116,7 @@ List<Merchant> merchantList = [
       'https://www.instagram.com/xiboba.indonesia/'
     ],
     avaibility: ['Gojek', 'Grab', 'Shopeefood'],
-    img: ['img/xiboba1.webp', 'img/xiboba2.jpg', 'img/xiboba3.jpg'],
+    img: ['img/xiboba1.jpg', 'img/xiboba2.jpg', 'img/xiboba3.jpg'],
     rating: 9.5,
     tag: {'Minuman', 'Boba', 'Brown Sugar'},
     menu: {

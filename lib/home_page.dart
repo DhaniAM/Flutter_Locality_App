@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_2/Merchant_Card.dart';
-import 'package:flutter_project_2/Merchant.dart';
+import 'package:flutter_project_2/merchant_card.dart';
+import 'package:flutter_project_2/merchant.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -15,7 +15,6 @@ class HomePage extends StatelessWidget {
           child: MerchantCard(
             merchant: merchant,
             context: context,
-            index: index,
           ),
         );
       },

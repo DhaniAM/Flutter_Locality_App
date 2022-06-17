@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'Bottom_Nav.dart';
-import 'Home_Page.dart';
+import 'bottom_nav.dart';
+import 'home_page.dart';
 
 void main() {
   runApp(const MyApp());
