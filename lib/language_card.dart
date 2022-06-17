@@ -6,38 +6,51 @@ class LanguageCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          colors: [
-            Colors.yellow,
-            Colors.orange,
-          ],
-        ),
-      ),
+      // decoration: const BoxDecoration(
+      //   borderRadius: BorderRadius.only(bottomRight: Radius.circular(100)),
+      // gradient: LinearGradient(
+      //   colors: [
+      //     Colors.yellow,
+      //     Colors.orange,
+      //   ],
+      // ),
+      // ),
       margin: const EdgeInsets.all(10),
       child: Card(
+        shadowColor: Colors.blue,
+        color: const Color(0xFFFFAD43),
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+            bottomRight: Radius.circular(50),
+          ),
+        ),
         child: Container(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
+              // Image
               Container(
-                padding: const EdgeInsets.all(20),
+                color: Colors.white,
+                padding: const EdgeInsets.all(15),
                 child: Image.asset(
                   'img/C.png',
-                  width: 100,
                   height: 100,
                 ),
               ),
+              // Text
               Container(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const <Widget>[
-                    Text(
-                      'C',
-                      style: TextStyle(fontSize: 40),
-                    ),
-                    Text('since 1972'),
-                  ],
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 20),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: const <Widget>[
+                      Text(
+                        'C',
+                        style: TextStyle(fontSize: 40),
+                      ),
+                      Text('since 1972'),
+                    ],
+                  ),
                 ),
               ),
             ],
