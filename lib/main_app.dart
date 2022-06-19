@@ -26,7 +26,19 @@ class _MainAppState extends State<MainApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Merchant Lokal')),
+      appBar: AppBar(
+        title: const Text('Local Merchant'),
+        flexibleSpace: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                Colors.red,
+                Colors.orange,
+              ],
+            ),
+          ),
+        ),
+      ),
       body: Container(child: _widgetOptions.elementAt(selectedIndex)),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[

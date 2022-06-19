@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project_2/merchant_card.dart';
 import 'package:flutter_project_2/merchant.dart';
+import 'package:flutter_project_2/merchant_detail_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -11,7 +12,11 @@ class HomeScreen extends StatelessWidget {
       itemBuilder: (context, index) {
         final Merchant merchant = merchantList[index];
         return InkWell(
-          onTap: () {},
+          onTap: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return MerchantDetailScreen(merchant: merchant);
+            }));
+          },
           child: MerchantCard(
             merchant: merchant,
             context: context,

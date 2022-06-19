@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_2/about_screen.dart';
 import 'main_app.dart';
 
 void main() {
@@ -13,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Local Merchant',
       theme: ThemeData(
         fontFamily: 'comfortaa',
         primarySwatch: Colors.deepOrange,
