@@ -12,6 +12,7 @@ class HomeScreen extends StatelessWidget {
       itemBuilder: (context, index) {
         final Merchant merchant = merchantList[index];
         return InkWell(
+          splashColor: Colors.yellow,
           onTap: () {
             Navigator.push(context, MaterialPageRoute(builder: (context) {
               return MerchantDetailScreen(merchant: merchant);

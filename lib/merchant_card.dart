@@ -14,7 +14,6 @@ class MerchantCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    int tagLength = merchant.tag.length;
     return Container(
       margin: const EdgeInsets.all(8),
       // Each merchant on home page
@@ -76,10 +75,8 @@ class MerchantCard extends StatelessWidget {
                     ),
 
                     /// Tag
-                    Container(
-                      // color: Colors.blue,
+                    SizedBox(
                       // width of tag container
-                      width: 224,
                       child: Wrap(
                         children: <Widget>[
                           // Start from 1 because 0 is minuman so it looks ugly and the same for all
@@ -90,6 +87,7 @@ class MerchantCard extends StatelessWidget {
                               child: TagCard(
                                 merchant: merchant,
                                 index: i,
+                                color: const Color(0xFFFFE600),
                               ),
                             ),
                         ],
