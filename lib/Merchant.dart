@@ -2,6 +2,7 @@ class Merchant {
   String name, overview, openTime;
   double rating;
   List<String> location, contact, avaibility, img;
+  // Tag must be min of 3
   Set<String> tag;
   Map<String, String> menu;
 

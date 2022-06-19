@@ -30,7 +30,7 @@ class MerchantCard extends StatelessWidget {
               gradient: LinearGradient(
                 colors: <Color>[
                   Color.fromARGB(255, 255, 231, 96),
-                  Color.fromARGB(255, 255, 137, 3),
+                  Color(0xFFFF8903),
                 ],
                 begin: Alignment.centerLeft,
                 end: Alignment.centerRight,
@@ -76,14 +76,21 @@ class MerchantCard extends StatelessWidget {
                     ),
 
                     /// Tag
-                    SizedBox(
+                    Container(
+                      // color: Colors.blue,
+                      // width of tag container
                       width: 224,
                       child: Wrap(
                         children: <Widget>[
-                          for (int i = 0; i < tagLength; i++)
-                            TagCard(
-                              merchant: merchant,
-                              index: i,
+                          // Start from 1 because 0 is minuman so it looks ugly and the same for all
+                          // the Tag
+                          for (int i = 1; i < 3; i++)
+                            Container(
+                              margin: const EdgeInsets.only(top: 10, left: 10),
+                              child: TagCard(
+                                merchant: merchant,
+                                index: i,
+                              ),
                             ),
                         ],
                       ),

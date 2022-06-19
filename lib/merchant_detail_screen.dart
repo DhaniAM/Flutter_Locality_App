@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project_2/tag_card.dart';
 
 import 'merchant.dart';
 
@@ -9,14 +10,18 @@ class MerchantDetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final int tagLength = merchant.tag.length;
     return Scaffold(
       body: ListView(
         children: [
           Stack(
             children: <Widget>[
+              /// Merchant background image
               Image.asset(
                 merchant.img[0],
               ),
+
+              /// Back arrow button
               Container(
                 padding: const EdgeInsets.all(10),
                 child: CircleAvatar(
@@ -32,6 +37,8 @@ class MerchantDetailScreen extends StatelessWidget {
                   ),
                 ),
               ),
+
+              /// Merchant Mid Box
               Container(
                 width: 300,
                 height: 300,
@@ -41,6 +48,37 @@ class MerchantDetailScreen extends StatelessWidget {
                   border: Border.all(color: Colors.red, width: 3),
                   borderRadius: BorderRadius.circular(32),
                 ),
+                child: Column(children: <Widget>[
+                  /// Box Merchant name
+                  Container(
+                    child: Text(
+                      merchant.name,
+                      style: const TextStyle(fontSize: 36),
+                    ),
+                  ),
+
+                  /// Box Merchant Tags
+                  Container(
+                    height: 70,
+                    // color: Colors.blue,
+                    // align all tag to center based on cross axis
+                    alignment: Alignment.center,
+                    child: Wrap(
+                      // align all tag to center based on main axis
+                      alignment: WrapAlignment.center,
+                      children: <Widget>[
+                        for (int i = 0; i < tagLength; i++)
+                          Container(
+                            margin: const EdgeInsets.all(5),
+                            child: TagCard(
+                              merchant: merchant,
+                              index: i,
+                            ),
+                          )
+                      ],
+                    ),
+                  ),
+                ]),
               ),
             ],
           )

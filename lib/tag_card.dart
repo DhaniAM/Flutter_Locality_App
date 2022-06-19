@@ -15,7 +15,6 @@ class TagCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(25),
           color: const Color(0xFFFFE600),
         ),
-        margin: const EdgeInsets.only(top: 10, left: 10),
         padding: const EdgeInsets.all(5),
         child: Text(merchant.tag.elementAt(index ?? 0),
             style: const TextStyle(
