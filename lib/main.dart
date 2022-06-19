@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-
-import 'bottom_nav.dart';
-import 'home_page.dart';
+import 'package:flutter_project_2/about_screen.dart';
+import 'main_app.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,11 +18,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'comfortaa',
         primarySwatch: Colors.deepOrange,
       ),
-      home: Scaffold(
-        appBar: AppBar(title: const Text('Merchant Lokal')),
-        body: const HomePage(),
-        bottomNavigationBar: const BottomNav(),
-      ),
+      home: const MainApp(),
     );
   }
 }

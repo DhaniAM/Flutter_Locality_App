@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_project_2/merchant_card.dart';
 import 'package:flutter_project_2/merchant.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
