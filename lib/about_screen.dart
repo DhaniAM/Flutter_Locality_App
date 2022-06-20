@@ -13,9 +13,9 @@ class AboutScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: const <Widget>[
           Text(
-            'Local Merchant',
+            'Locality',
             style: TextStyle(
-              fontSize: 20,
+              fontSize: 30,
             ),
           ),
           Padding(

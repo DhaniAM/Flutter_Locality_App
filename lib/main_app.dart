@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project_2/about_screen.dart';
 import 'package:flutter_project_2/home_screen.dart';
+import 'package:flutter_project_2/register_merchant.dart';
 
 class MainApp extends StatefulWidget {
   const MainApp({Key? key}) : super(key: key);
@@ -58,6 +59,16 @@ class _MainAppState extends State<MainApp> {
         selectedItemColor: Colors.amber[800],
         onTap: _onItemTapped,
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context) {
+            return RegisterMerchant();
+          }));
+        },
+        tooltip: 'Add Menu',
+        child: const Icon(Icons.add_box_rounded),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }
