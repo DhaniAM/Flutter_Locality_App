@@ -16,6 +16,7 @@ class MerchantCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.all(8),
+
       // Each merchant on home page
       child: Card(
         elevation: 0.0,
@@ -46,7 +47,7 @@ class MerchantCard extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
-              // Image
+              /// Merchant Image
               Container(
                 decoration: BoxDecoration(
                   color: Colors.white,
@@ -56,9 +57,12 @@ class MerchantCard extends StatelessWidget {
                   ),
                 ),
                 padding: const EdgeInsets.all(5),
-                child: Image.asset(
-                  merchant.img[0],
-                  height: 100,
+                child: Hero(
+                  tag: merchant.img,
+                  child: Image.asset(
+                    merchant.img[0],
+                    height: 100,
+                  ),
                 ),
               ),
 

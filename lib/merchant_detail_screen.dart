@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project_2/image_detail.dart';
 import 'package:flutter_project_2/tag_card.dart';
 
 import 'merchant.dart';
@@ -18,11 +19,13 @@ class MerchantDetailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final int tagLength = merchant.tag.length;
     // Saving each menu to menuData, then pass to the widget
-    final menuData = <Widget>[];
+    final menuName = <Widget>[];
+    final menuPrice = <Widget>[];
     for (final menuList in merchant.menu.entries) {
       final key = menuList.key;
       final value = menuList.value;
-      menuData.add(Text('$key: Rp $value,-'));
+      menuName.add(Text(key));
+      menuPrice.add(Text('Rp $value,-'));
     }
     ;
 
@@ -41,14 +44,24 @@ class MerchantDetailScreen extends StatelessWidget {
             ],
           ),
         ),
-        // background-image: linear-gradient( 103.3deg,  rgba(252,225,208,1) 30%, rgba(255,173,214,1) 55.7%, rgba(162,186,245,1) 81.8% );
         child: ListView(
           children: [
             Stack(
               children: <Widget>[
                 /// Merchant background image
-                Image.asset(
-                  merchant.img[0],
+                Hero(
+                  tag: merchant.img,
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return ImageDetail(merchant: merchant, index: 0);
+                      }));
+                    },
+                    child: Image.asset(
+                      merchant.img[0],
+                    ),
+                  ),
                 ),
 
                 /// Back arrow button
@@ -198,12 +211,77 @@ class MerchantDetailScreen extends StatelessWidget {
                       style: headingStyle,
                     ),
                   ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: menuData,
+                  Table(
+                    columnWidths: const {1: FractionColumnWidth(.25)},
+                    defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+                    children: <TableRow>[
+                      for (int i = 0; i < menuName.length; i++)
+                        TableRow(children: [
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 3.0),
+                            child: menuName[i],
+                          ),
+                          menuPrice[i],
+                        ]),
+                    ],
                   ),
+                  // Row(
+                  //   mainAxisSize: MainAxisSize.min,
+                  //   children: menuData,
+                  // ),
                 ],
               ),
+            ),
+
+            /// Images
+            // It still not dynamic, so can't add extra images yet
+            Container(
+              // padding: const EdgeInsets.all(20),
+              margin: const EdgeInsets.only(bottom: 10),
+              decoration: detailDecoration,
+              child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: SizedBox(
+                    height: 200,
+                    child: Row(
+                      children: <Widget>[
+                        // First Image
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context) {
+                              return ImageDetail(merchant: merchant, index: 1);
+                            }));
+                          },
+                          child: Image.asset(
+                            merchant.img[1],
+                            height: 200,
+                          ),
+                        ),
+                        const VerticalDivider(
+                          color: Colors.purple,
+                          thickness: 2,
+                          width: 20,
+                          indent: 50,
+                          endIndent: 50,
+                        ),
+
+                        // Second Image
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context) {
+                              return ImageDetail(merchant: merchant, index: 2);
+                            }));
+                          },
+                          child: Image.asset(
+                            merchant.img[2],
+                            height: 200,
+                          ),
+                        ),
+                      ],
+                    ),
+                  )),
             ),
 
             // Location
