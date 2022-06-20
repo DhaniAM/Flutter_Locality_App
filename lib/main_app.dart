@@ -27,6 +27,7 @@ class _MainAppState extends State<MainApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         title: const Text(
           'Local Merchant',
@@ -62,7 +63,7 @@ class _MainAppState extends State<MainApp> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.push(context, MaterialPageRoute(builder: (context) {
-            return RegisterMerchant();
+            return const RegisterMerchant();
           }));
         },
         tooltip: 'Add Menu',

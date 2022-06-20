@@ -9,6 +9,8 @@ class ImageDetail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(child: Image.asset(merchant.img[index]));
+    return Expanded(
+        child: InteractiveViewer(
+            maxScale: 5, child: Image.asset(merchant.img[index])));
   }
 }
