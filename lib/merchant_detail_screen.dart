@@ -82,95 +82,97 @@ class MerchantDetailScreen extends StatelessWidget {
                 ),
 
                 /// Merchant Little Summary Box
-                Container(
-                  width: 300,
-                  height: 200,
-                  margin: const EdgeInsets.only(top: 290, left: 50, right: 50),
-                  decoration: BoxDecoration(
-                    color: const Color.fromARGB(255, 161, 60, 255)
-                        .withOpacity(0.3),
-                    border: Border.all(
-                        color: const Color.fromARGB(255, 106, 1, 175),
-                        width: 3),
-                    borderRadius: BorderRadius.circular(32),
-                  ),
-                  child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        /// Box Merchant name
-                        SizedBox(
-                          child: Text(
-                            merchant.name,
-                            style: const TextStyle(
-                                fontSize: 36,
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold),
+                Center(
+                  child: Container(
+                    width: 300,
+                    height: 200,
+                    margin: const EdgeInsets.only(top: 300),
+                    decoration: BoxDecoration(
+                      color: const Color.fromARGB(255, 161, 60, 255)
+                          .withOpacity(0.3),
+                      border: Border.all(
+                          color: const Color.fromARGB(255, 106, 1, 175),
+                          width: 3),
+                      borderRadius: BorderRadius.circular(32),
+                    ),
+                    child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          /// Box Merchant name
+                          SizedBox(
+                            child: Text(
+                              merchant.name,
+                              style: const TextStyle(
+                                  fontSize: 36,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
+                            ),
                           ),
-                        ),
 
-                        /// Box Merchant Tags
-                        Container(
-                          height: 70,
-                          // align all tag to center based on cross axis
-                          alignment: Alignment.center,
-                          child: Wrap(
-                            // align all tag to center based on main axis
-                            alignment: WrapAlignment.center,
-                            children: <Widget>[
-                              for (int i = 0; i < tagLength; i++)
-                                Container(
-                                  margin: const EdgeInsets.all(5),
-                                  child: TagCard(
-                                    merchant: merchant,
-                                    index: i,
-                                    color:
-                                        const Color.fromRGBO(198, 50, 224, 0.8),
-                                    textColor: Colors.white,
-                                  ),
-                                )
-                            ],
+                          /// Box Merchant Tags
+                          Container(
+                            height: 70,
+                            // align all tag to center based on cross axis
+                            alignment: Alignment.center,
+                            child: Wrap(
+                              // align all tag to center based on main axis
+                              alignment: WrapAlignment.center,
+                              children: <Widget>[
+                                for (int i = 0; i < tagLength; i++)
+                                  Container(
+                                    margin: const EdgeInsets.all(5),
+                                    child: TagCard(
+                                      merchant: merchant,
+                                      index: i,
+                                      color: const Color.fromRGBO(
+                                          198, 50, 224, 0.8),
+                                      textColor: Colors.white,
+                                    ),
+                                  )
+                              ],
+                            ),
                           ),
-                        ),
-                        SizedBox(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              // Open Time
-                              Row(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: <Widget>[
-                                  const Icon(
-                                    Icons.access_time,
-                                    color: Colors.white,
-                                    size: 30,
-                                  ),
-                                  Text(
-                                    merchant.openTime,
-                                    style: const TextStyle(
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                ],
-                              ),
-                              Row(
-                                children: <Widget>[
-                                  const Icon(
-                                    Icons.star_rounded,
-                                    color: Colors.yellow,
-                                    size: 30,
-                                  ),
-                                  Text(
-                                    merchant.rating.toString(),
-                                    style: const TextStyle(
-                                        color: Colors.yellow,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                ],
-                              ),
-                            ],
+                          SizedBox(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                // Open Time
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: <Widget>[
+                                    const Icon(
+                                      Icons.access_time,
+                                      color: Colors.white,
+                                      size: 30,
+                                    ),
+                                    Text(
+                                      merchant.openTime,
+                                      style: const TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ],
+                                ),
+                                Row(
+                                  children: <Widget>[
+                                    const Icon(
+                                      Icons.star_rounded,
+                                      color: Colors.yellow,
+                                      size: 30,
+                                    ),
+                                    Text(
+                                      merchant.rating.toString(),
+                                      style: const TextStyle(
+                                          color: Colors.yellow,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
                           ),
-                        ),
-                      ]),
+                        ]),
+                  ),
                 ),
               ],
             ),
