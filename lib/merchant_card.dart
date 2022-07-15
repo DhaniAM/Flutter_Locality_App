@@ -15,7 +15,7 @@ class MerchantCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.all(8),
+      margin: const EdgeInsets.only(top: 4, left: 8, right: 8, bottom: 4),
 
       // Each merchant on home page
       child: Card(

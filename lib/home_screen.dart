@@ -8,6 +8,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    /// build each Merchant Card in home screen
     return ListView.builder(
       itemBuilder: (context, index) {
         final Merchant merchant = merchantList[index];

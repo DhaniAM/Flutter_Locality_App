@@ -8,11 +8,11 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
+  /// This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Local Merchant',
+      title: 'Locality',
       theme: ThemeData(
         fontFamily: 'comfortaa',
         primarySwatch: Colors.deepOrange,

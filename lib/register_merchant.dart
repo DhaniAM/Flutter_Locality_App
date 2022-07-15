@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'merchant.dart';
 
 class RegisterMerchant extends StatefulWidget {
   const RegisterMerchant({Key? key}) : super(key: key);

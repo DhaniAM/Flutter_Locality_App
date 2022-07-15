@@ -21,7 +21,7 @@ class MerchantDetailScreen extends StatelessWidget {
     // Saving each menu to menuData, then pass to the widget
     final menuName = <Widget>[];
     final menuPrice = <Widget>[];
-    for (final menuList in merchant.menu.entries) {
+    for (dynamic menuList in merchant.menu.entries) {
       final key = menuList.key;
       final value = menuList.value;
       menuName.add(Text(key));
@@ -35,6 +35,7 @@ class MerchantDetailScreen extends StatelessWidget {
 
     return Scaffold(
       body: Container(
+        /// Backgroun color
         decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: <Color>[
@@ -48,7 +49,7 @@ class MerchantDetailScreen extends StatelessWidget {
           children: [
             Stack(
               children: <Widget>[
-                /// Merchant background image
+                /// Merchant top image
                 Hero(
                   tag: merchant.img,
                   child: GestureDetector(
@@ -98,7 +99,7 @@ class MerchantDetailScreen extends StatelessWidget {
                     child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          /// Box Merchant name
+                          /// Box Merchant Name
                           SizedBox(
                             child: Text(
                               merchant.name,
@@ -132,11 +133,13 @@ class MerchantDetailScreen extends StatelessWidget {
                               ],
                             ),
                           ),
+
+                          /// Open time and Rating
                           SizedBox(
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
-                                // Open Time
+                                /// Open Time
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: <Widget>[
@@ -153,6 +156,8 @@ class MerchantDetailScreen extends StatelessWidget {
                                     ),
                                   ],
                                 ),
+
+                                /// Rating
                                 Row(
                                   children: <Widget>[
                                     const Icon(
@@ -177,7 +182,7 @@ class MerchantDetailScreen extends StatelessWidget {
               ],
             ),
 
-            // Overview
+            /// Overview
             Container(
               padding: const EdgeInsets.all(20),
               margin: const EdgeInsets.only(top: 10, bottom: 10),
@@ -198,7 +203,7 @@ class MerchantDetailScreen extends StatelessWidget {
               ),
             ),
 
-            // Menu
+            /// Menu
             Container(
               padding: const EdgeInsets.all(20),
               margin: const EdgeInsets.only(bottom: 10),
@@ -227,18 +232,13 @@ class MerchantDetailScreen extends StatelessWidget {
                         ]),
                     ],
                   ),
-                  // Row(
-                  //   mainAxisSize: MainAxisSize.min,
-                  //   children: menuData,
-                  // ),
                 ],
               ),
             ),
 
-            /// Images
-            // It still not dynamic, so can't add extra images yet
+            /// Merchant Images
+            /// It still not dynamic, so can't add extra images yet
             Container(
-              // padding: const EdgeInsets.all(20),
               margin: const EdgeInsets.only(bottom: 10),
               decoration: detailDecoration,
               child: SingleChildScrollView(
@@ -247,7 +247,7 @@ class MerchantDetailScreen extends StatelessWidget {
                     height: 200,
                     child: Row(
                       children: <Widget>[
-                        // First Image
+                        /// First Image
                         GestureDetector(
                           onTap: () {
                             Navigator.push(context,
@@ -268,7 +268,7 @@ class MerchantDetailScreen extends StatelessWidget {
                           endIndent: 50,
                         ),
 
-                        // Second Image
+                        /// Second Image
                         GestureDetector(
                           onTap: () {
                             Navigator.push(context,
@@ -286,7 +286,7 @@ class MerchantDetailScreen extends StatelessWidget {
                   )),
             ),
 
-            // Location
+            /// Location
             Container(
               padding: const EdgeInsets.all(20),
               margin: const EdgeInsets.only(bottom: 10),
@@ -311,7 +311,7 @@ class MerchantDetailScreen extends StatelessWidget {
               ),
             ),
 
-            // Contact
+            /// Contact
             Container(
               padding: const EdgeInsets.all(20),
               // margin: const EdgeInsets.only(bottom: 10),

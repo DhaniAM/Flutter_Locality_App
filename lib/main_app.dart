@@ -28,11 +28,15 @@ class _MainAppState extends State<MainApp> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
+
+      /// Top Bar in Home screen
       appBar: AppBar(
         title: const Text(
-          'Local Merchant',
+          'Locality',
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
+
+        /// Top Bar Gradient Styling
         flexibleSpace: Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
@@ -44,7 +48,11 @@ class _MainAppState extends State<MainApp> {
           ),
         ),
       ),
+
+      /// Content for each bottomNavigationBar
       body: Container(child: _widgetOptions.elementAt(selectedIndex)),
+
+      /// bottomNavigationBar button
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
@@ -60,6 +68,8 @@ class _MainAppState extends State<MainApp> {
         selectedItemColor: Colors.amber[800],
         onTap: _onItemTapped,
       ),
+
+      /// Registering Merchant Button
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.push(context, MaterialPageRoute(builder: (context) {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project_2/merchant.dart';
 
-// TagCard returning item based on the list
+/// TagCard returning item based on the list
 class TagCard extends StatelessWidget {
   final Merchant merchant;
   final int? index;

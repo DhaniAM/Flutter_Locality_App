@@ -1,11 +1,12 @@
 class Merchant {
-  String name, overview, openTime;
-  String rating;
+  String name, overview, openTime, rating;
   List<String> location, contact, avaibility, img;
-  // Tag must be min of 3
+
+  /// Tag must be min of 3
   Set<String> tag;
   Map<String, String> menu;
 
+  ///Default Value
   Merchant({
     this.name = 'nama-merchant',
     this.overview = 'penjelasan-singkat-merchant',
