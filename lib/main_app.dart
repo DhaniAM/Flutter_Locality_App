@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_project_2/about_screen.dart';
 import 'package:flutter_project_2/home_screen.dart';
 import 'package:flutter_project_2/register_merchant.dart';
+import 'package:flutter_project_2/search_screen.dart';
 
 class MainApp extends StatefulWidget {
   const MainApp({Key? key}) : super(key: key);
@@ -13,8 +14,10 @@ class MainApp extends StatefulWidget {
 class _MainAppState extends State<MainApp> {
   int selectedIndex = 0;
 
+  /// for Content Screen, not for the bottomNavBar
   static const List<Widget> _widgetOptions = <Widget>[
     HomeScreen(),
+    SearchScreen(),
     AboutScreen(),
   ];
 
@@ -60,6 +63,10 @@ class _MainAppState extends State<MainApp> {
             label: 'Home',
           ),
           BottomNavigationBarItem(
+            icon: Icon(Icons.search),
+            label: 'Search',
+          ),
+          BottomNavigationBarItem(
             icon: Icon(Icons.info),
             label: 'About',
           ),
@@ -78,8 +85,11 @@ class _MainAppState extends State<MainApp> {
         },
         tooltip: 'Add Menu',
         child: const Icon(Icons.add_box_rounded),
+        foregroundColor: Colors.red,
+        backgroundColor: Colors.white,
+        hoverElevation: 24.6,
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
     );
   }
 }

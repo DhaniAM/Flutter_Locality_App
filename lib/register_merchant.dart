@@ -21,7 +21,7 @@ class _RegisterMerchantState extends State<RegisterMerchant> {
     String merchantMenu = '';
 
     return Container(
-      // Background decoration
+      /// Background decoration
       decoration: const BoxDecoration(
         gradient: LinearGradient(
           colors: <Color>[
@@ -40,11 +40,11 @@ class _RegisterMerchantState extends State<RegisterMerchant> {
                 Container(
                   padding: const EdgeInsets.all(10),
                   child: CircleAvatar(
-                    backgroundColor: Colors.white,
+                    backgroundColor: Colors.deepOrange,
                     child: IconButton(
                       icon: const Icon(
                         Icons.arrow_back_ios_rounded,
-                        color: Colors.purple,
+                        color: Colors.white,
                       ),
                       onPressed: () {
                         Navigator.pop(context);
@@ -87,7 +87,7 @@ class _RegisterMerchantState extends State<RegisterMerchant> {
                     ),
                   ),
 
-                  // Overview
+                  /// Overview
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: TextFormField(
@@ -109,7 +109,7 @@ class _RegisterMerchantState extends State<RegisterMerchant> {
                     ),
                   ),
 
-                  // Open time
+                  /// Open time
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: TextFormField(
@@ -131,7 +131,7 @@ class _RegisterMerchantState extends State<RegisterMerchant> {
                     ),
                   ),
 
-                  // Review
+                  /// Review
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: TextFormField(
@@ -153,7 +153,7 @@ class _RegisterMerchantState extends State<RegisterMerchant> {
                     ),
                   ),
 
-                  // Menu
+                  /// Menu
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: TextFormField(
@@ -175,7 +175,7 @@ class _RegisterMerchantState extends State<RegisterMerchant> {
                     ),
                   ),
 
-                  // Location
+                  /// Location
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: TextFormField(
@@ -197,7 +197,7 @@ class _RegisterMerchantState extends State<RegisterMerchant> {
                     ),
                   ),
 
-                  // Contact
+                  /// Contact
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: TextFormField(
@@ -219,7 +219,7 @@ class _RegisterMerchantState extends State<RegisterMerchant> {
                     ),
                   ),
 
-                  // Submit Button
+                  /// Submit Button
                   Padding(
                     padding: const EdgeInsets.all(8),
                     child: ElevatedButton(
