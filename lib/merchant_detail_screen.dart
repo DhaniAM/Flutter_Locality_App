@@ -27,7 +27,6 @@ class MerchantDetailScreen extends StatelessWidget {
       menuName.add(Text(key));
       menuPrice.add(Text('Rp $value,-'));
     }
-    ;
 
     final BoxDecoration detailDecoration = BoxDecoration(
       color: const Color.fromARGB(255, 228, 228, 228).withOpacity(0.2),
@@ -67,7 +66,19 @@ class MerchantDetailScreen extends StatelessWidget {
 
                 /// Back arrow button
                 Container(
-                  padding: const EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(6),
+                  margin: const EdgeInsets.all(10),
+                  decoration: const BoxDecoration(
+                    color: Colors.white,
+                    shape: BoxShape.circle,
+                    boxShadow: [
+                      BoxShadow(
+                          blurRadius: 1,
+                          color: Colors.grey,
+                          spreadRadius: 1,
+                          offset: Offset(0.5, 1)),
+                    ],
+                  ),
                   child: CircleAvatar(
                     backgroundColor: Colors.white,
                     child: IconButton(

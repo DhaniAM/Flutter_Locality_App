@@ -7,6 +7,7 @@ class AboutScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     const TextStyle textStyling = TextStyle(
       fontSize: 16,
+      height: 1.8,
     );
     return Center(
       child: Column(
@@ -29,7 +30,7 @@ class AboutScreen extends StatelessWidget {
             style: textStyling,
           ),
           Text(
-            'copyright 2022 Ramadhani A.M',
+            '\xA9 copyright 2022 Ramadhani A.M',
             style: textStyling,
           ),
           Text(

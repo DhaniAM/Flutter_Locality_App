@@ -84,10 +84,10 @@ class _MainAppState extends State<MainApp> {
           }));
         },
         tooltip: 'Add Menu',
-        child: const Icon(Icons.add_box_rounded),
         foregroundColor: Colors.red,
         backgroundColor: Colors.white,
         hoverElevation: 24.6,
+        child: const Icon(Icons.add_box_rounded),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
     );
