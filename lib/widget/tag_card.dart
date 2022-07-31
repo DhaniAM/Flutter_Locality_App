@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_2/merchant.dart';
+import 'package:flutter_project_2/merchant_data.dart';
 
 /// TagCard returning item based on the list
 class TagCard extends StatelessWidget {

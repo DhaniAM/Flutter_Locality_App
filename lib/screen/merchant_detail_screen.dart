@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_2/image_detail.dart';
-import 'package:flutter_project_2/tag_card.dart';
-
-import 'merchant.dart';
+import 'package:flutter_project_2/widget/image_detail.dart';
+import 'package:flutter_project_2/widget/tag_card.dart';
+import 'package:flutter_project_2/merchant_data.dart';
 
 class MerchantDetailScreen extends StatelessWidget {
   final Merchant merchant;
@@ -29,7 +28,7 @@ class MerchantDetailScreen extends StatelessWidget {
     }
 
     final BoxDecoration detailDecoration = BoxDecoration(
-      color: const Color.fromARGB(255, 228, 228, 228).withOpacity(0.2),
+      color: const Color.fromRGBO(228, 228, 228, 1).withOpacity(0.2),
     );
 
     return Scaffold(
@@ -84,7 +83,7 @@ class MerchantDetailScreen extends StatelessWidget {
                     child: IconButton(
                       icon: const Icon(
                         Icons.arrow_back_ios_rounded,
-                        color: Colors.purple,
+                        color: Color.fromRGBO(156, 39, 176, 1),
                       ),
                       onPressed: () {
                         Navigator.pop(context);
@@ -100,10 +99,10 @@ class MerchantDetailScreen extends StatelessWidget {
                     height: 200,
                     margin: const EdgeInsets.only(top: 300),
                     decoration: BoxDecoration(
-                      color: const Color.fromARGB(255, 161, 60, 255)
+                      color: const Color.fromRGBO(161, 60, 255, 1)
                           .withOpacity(0.3),
                       border: Border.all(
-                          color: const Color.fromARGB(255, 106, 1, 175),
+                          color: const Color.fromRGBO(106, 1, 175, 1),
                           width: 3),
                       borderRadius: BorderRadius.circular(32),
                     ),
