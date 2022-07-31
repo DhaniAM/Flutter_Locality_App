@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_2/screen/about_screen.dart';
+import 'package:flutter_project_2/screen/account_screen.dart';
 import 'package:flutter_project_2/screen/home_screen.dart';
+import 'package:flutter_project_2/screen/random_screen.dart';
 import 'package:flutter_project_2/screen/register_merchant_screen.dart';
 import 'package:flutter_project_2/screen/search_screen.dart';
+
+/// Color Palette
+/// Color.fromRGBO(255, 92, 0, 1),
+/// Color.fromRGBO(255, 144, 15, 1),
+/// Color.fromRGBO(255, 202, 15, 1),
+/// Color.fromRGBO(255, 230, 0, 1),
 
 class MainApp extends StatefulWidget {
   const MainApp({Key? key}) : super(key: key);
@@ -13,12 +20,17 @@ class MainApp extends StatefulWidget {
 
 class _MainAppState extends State<MainApp> {
   int selectedIndex = 0;
+  Color c1 = const Color.fromRGBO(255, 92, 0, 1);
+  Color c2 = const Color.fromRGBO(255, 144, 15, 1);
+  Color c3 = const Color.fromRGBO(255, 202, 15, 1);
+  Color c4 = const Color.fromRGBO(255, 230, 0, 1);
 
   /// for Content Screen, not for the bottomNavBar
   static const List<Widget> _widgetOptions = <Widget>[
     HomeScreen(),
     SearchScreen(),
-    AboutScreen(),
+    RandomScreen(),
+    AccountScreen(),
   ];
 
   void _onItemTapped(int index) {
@@ -57,6 +69,15 @@ class _MainAppState extends State<MainApp> {
 
       /// bottomNavigationBar button
       bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Colors.white,
+        unselectedItemColor: Colors.white,
+        showSelectedLabels: true,
+        showUnselectedLabels: false,
+        selectedIconTheme: const IconThemeData(size: 30),
+        backgroundColor: c2,
+        currentIndex: selectedIndex,
+        type: BottomNavigationBarType.fixed,
+        onTap: _onItemTapped,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
@@ -67,13 +88,14 @@ class _MainAppState extends State<MainApp> {
             label: 'Search',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.info),
-            label: 'About',
+            icon: Icon(Icons.question_mark_rounded),
+            label: 'Random',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.account_circle_rounded),
+            label: 'Account',
           ),
         ],
-        currentIndex: selectedIndex,
-        selectedItemColor: Colors.amber[800],
-        onTap: _onItemTapped,
       ),
 
       /// Registering Merchant Button

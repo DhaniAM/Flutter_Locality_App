@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Locality',
       theme: ThemeData(
         fontFamily: 'comfortaa',
-        primarySwatch: Colors.deepOrange,
+        primarySwatch: Colors.orange,
       ),
       home: const MainApp(),
     );
