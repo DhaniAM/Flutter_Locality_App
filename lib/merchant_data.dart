@@ -1,5 +1,5 @@
 class Merchant {
-  String name, overview, openTime, rating;
+  String name, overview, openTime, rating, type;
   List<String> location, contact, avaibility, img;
 
   /// Tag must be min of 3
@@ -12,6 +12,7 @@ class Merchant {
     this.overview = 'penjelasan-singkat-merchant',
     this.openTime = 'jam-buka-merchant',
     this.rating = '0',
+    this.type = 'merchant-type',
     this.location = const ['lokasi-merchant', 'link-to-location'],
     this.contact = const ['kontak-merchant-1', 'kontak-merchant-2'],
     this.avaibility = const ['gojek', 'grab', 'shopeefood'],
@@ -37,6 +38,7 @@ List<Merchant> merchantList = [
     avaibility: ['Gojek', 'Grab', 'Shopeefood'],
     img: ['img/janji-jiwa1.jpg', 'img/janji-jiwa2.jpg', 'img/janji-jiwa3.jpg'],
     rating: '9.5',
+    type: 'Drink',
     tag: {'Minuman', 'Coffee', 'Tea', 'Toast'},
     menu: {
       'Latte': '20.000',
@@ -58,6 +60,7 @@ List<Merchant> merchantList = [
     avaibility: ['Gojek', 'Grab', 'Shopeefood'],
     img: ['img/gulu-gulu1.jpg', 'img/gulu-gulu2.jpg', 'img/gulu-gulu3.jpg'],
     rating: '8.5',
+    type: 'Drink',
     tag: {'Minuman', 'Cheese Tea', 'Boba'},
     menu: {
       'Cheese Umami Matcha': '24.000',
@@ -79,6 +82,7 @@ List<Merchant> merchantList = [
     avaibility: ['Gojek', 'Grab', 'Shopeefood'],
     img: ['img/kopi-soe1.jpg', 'img/kopi-soe2.jpg', 'img/kopi-soe3.jpeg'],
     rating: '8.0',
+    type: 'Drink',
     tag: {'Minuman', 'Regal', 'Coffee'},
     menu: {
       'Kopi Soe Goela Merah': '18.000',
@@ -98,6 +102,7 @@ List<Merchant> merchantList = [
       avaibility: ['Gojek', 'Grab', 'Shopeefood'],
       img: ['img/kopi-yor1.webp', 'img/kopi-yor2.jpg', 'img/kopi-yor3.jpeg'],
       rating: '8.5',
+      type: 'Drink',
       tag: {'Minuman', 'Kopyor', 'Coffee'},
       menu: {
         'Es Kopi Yor': '26.000',
@@ -120,6 +125,7 @@ List<Merchant> merchantList = [
     avaibility: ['Gojek', 'Grab', 'Shopeefood'],
     img: ['img/xiboba1.jpg', 'img/xiboba2.jpg', 'img/xiboba3.jpg'],
     rating: '9.5',
+    type: 'Drink',
     tag: {'Minuman', 'Boba', 'Brown Sugar'},
     menu: {
       'Brown Sugar Boba Fresh Milk': '27.000',

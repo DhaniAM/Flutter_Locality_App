@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project_2/merchant_data.dart';
 import 'package:flutter_project_2/widget/tag_card.dart';
+import 'package:flutter_project_2/screen/merchant_detail_screen.dart';
 
 class MerchantCard extends StatelessWidget {
   final Merchant merchant;
@@ -14,72 +15,63 @@ class MerchantCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.only(top: 4, left: 8, right: 8, bottom: 4),
-
-      // Each merchant on home page
-      child: Card(
-        elevation: 0.0,
-        shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.only(
-            bottomRight: Radius.circular(50),
-          ),
-        ),
-        child: Container(
-          decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                colors: <Color>[
-                  Color.fromARGB(255, 255, 231, 96),
-                  Color(0xFFFF8903),
-                ],
-                begin: Alignment.centerLeft,
-                end: Alignment.centerRight,
-              ),
-              borderRadius: BorderRadius.only(bottomRight: Radius.circular(50)),
-              boxShadow: [
-                BoxShadow(
-                  blurRadius: 1,
-                  blurStyle: BlurStyle.normal,
-                  offset: Offset(1, 2),
-                  color: Colors.grey,
-                ),
-              ]),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: <Widget>[
-              /// Merchant Image
-              Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  border: Border.all(
-                    width: 5.0,
-                    color: Colors.white,
-                  ),
-                ),
-                padding: const EdgeInsets.all(5),
-                child: Hero(
-                  tag: merchant.img,
+    return InkWell(
+      borderRadius: BorderRadius.circular(15),
+      splashColor: Color.fromRGBO(255, 202, 15, 1),
+      onTap: () {
+        Navigator.push(context, MaterialPageRoute(builder: (context) {
+          return MerchantDetailScreen(merchant: merchant);
+        }));
+      },
+      child: Container(
+        decoration: BoxDecoration(
+            border: Border.all(color: Colors.black, width: 0.5),
+            borderRadius: BorderRadius.circular(15)),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: <Widget>[
+            /// Merchant Image
+            Container(
+              padding: const EdgeInsets.only(top: 5, left: 5, bottom: 5),
+              child: Hero(
+                tag: merchant.img,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(50),
                   child: Image.asset(
                     merchant.img[0],
                     height: 100,
                   ),
                 ),
               ),
+            ),
 
-              /// Merchant Name and Tag
-              Container(
-                padding: const EdgeInsets.only(left: 20),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    /// Merchant name
-                    Text(
-                      merchant.name,
-                      style: const TextStyle(fontSize: 30),
+            /// Merchant Name, Type, and Tag
+            Container(
+              width: 190,
+              padding: const EdgeInsets.fromLTRB(10, 0, 20, 0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  /// Merchant name
+                  Text(
+                    merchant.name,
+                    style: const TextStyle(
+                      fontSize: 20,
                     ),
+                    overflow: TextOverflow.ellipsis,
+                  ),
 
-                    /// Tag
-                    SizedBox(
+                  /// Merchant Category/Type
+                  Padding(
+                    padding:
+                        const EdgeInsets.only(top: 10.0, left: 10, bottom: 0),
+                    child: Text('Type: ${merchant.type}'),
+                  ),
+
+                  /// Tag
+                  Padding(
+                    padding: const EdgeInsets.only(left: 10),
+                    child: SizedBox(
                       // width of tag container
                       child: Wrap(
                         children: <Widget>[
@@ -87,7 +79,7 @@ class MerchantCard extends StatelessWidget {
                           // the Tag
                           for (int i = 1; i < 3; i++)
                             Container(
-                              margin: const EdgeInsets.only(top: 10, left: 10),
+                              margin: const EdgeInsets.only(top: 10, right: 5),
                               child: TagCard(
                                 merchant: merchant,
                                 index: i,
@@ -97,11 +89,22 @@ class MerchantCard extends StatelessWidget {
                         ],
                       ),
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
-            ],
-          ),
+            ),
+
+            /// Star Rating
+            Column(
+              children: <Widget>[
+                const Icon(Icons.star, color: Colors.yellow, size: 50),
+                Text(
+                  merchant.rating,
+                  style: const TextStyle(fontSize: 20),
+                )
+              ],
+            ),
+          ],
         ),
       ),
     );

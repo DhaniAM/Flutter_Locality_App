@@ -22,11 +22,13 @@ class TagCard extends StatelessWidget {
         color: color,
       ),
       padding: const EdgeInsets.all(5),
-      child: Text(merchant.tag.elementAt(index ?? 0),
-          style: TextStyle(
-            fontSize: 12,
-            color: textColor,
-          )),
+      child: Text(
+        merchant.tag.elementAt(index ?? 0),
+        style: TextStyle(
+          fontSize: 12,
+          color: textColor,
+        ),
+      ),
     );
   }
 }

@@ -71,7 +71,6 @@ class _MainAppState extends State<MainApp> {
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Colors.white,
         unselectedItemColor: Colors.white,
-        showSelectedLabels: true,
         showUnselectedLabels: false,
         selectedIconTheme: const IconThemeData(size: 30),
         backgroundColor: c2,
