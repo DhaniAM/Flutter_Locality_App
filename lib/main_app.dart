@@ -44,26 +44,6 @@ class _MainAppState extends State<MainApp> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
 
-      /// Top Bar in Home screen
-      appBar: AppBar(
-        title: const Text(
-          'Locality',
-          style: TextStyle(fontWeight: FontWeight.bold),
-        ),
-
-        /// Top Bar Gradient Styling
-        flexibleSpace: Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                Colors.red,
-                Colors.orange,
-              ],
-            ),
-          ),
-        ),
-      ),
-
       /// Content for each bottomNavigationBar
       body: Container(child: _widgetOptions.elementAt(selectedIndex)),
 
