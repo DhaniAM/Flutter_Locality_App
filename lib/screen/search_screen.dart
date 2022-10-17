@@ -18,7 +18,17 @@ class SearchScreen extends StatelessWidget {
           ),
         ),
         Column(
-          children: <Widget>[MerchantCard(merchant: merchantList[0])],
+          children: <Widget>[
+            MerchantCard(
+              merchant: merchantList[0],
+            ),
+            MerchantCard(
+              merchant: merchantList[1],
+            ),
+            MerchantCard(
+              merchant: merchantList[2],
+            ),
+          ],
         ),
       ],
     );

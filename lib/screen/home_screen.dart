@@ -11,11 +11,8 @@ class HomeScreen extends StatelessWidget {
     return ListView.builder(
       itemBuilder: (context, index) {
         final Merchant merchant = merchantList[index];
-        return Padding(
-          padding: const EdgeInsets.only(top: 14, left: 14, right: 14),
-          child: MerchantCard(
-            merchant: merchant,
-          ),
+        return MerchantCard(
+          merchant: merchant,
         );
       },
       itemCount: merchantList.length,
