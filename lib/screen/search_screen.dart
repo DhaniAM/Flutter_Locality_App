@@ -9,11 +9,35 @@ class SearchScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       children: [
-        Container(
-          decoration: const BoxDecoration(),
-          child: const TextField(
+        const Padding(
+          padding: EdgeInsets.only(top: 14, left: 14, right: 14),
+          child: TextField(
+            style: TextStyle(
+              color: Colors.white,
+            ),
             decoration: InputDecoration(
-              labelText: "Cari barang yang diinginkan...",
+              hintStyle: TextStyle(
+                color: Color.fromRGBO(255, 255, 255, 0.7),
+              ),
+              hintText: "Find merchants, menus, tags...",
+              filled: true,
+              fillColor: Color.fromRGBO(255, 144, 15, 1),
+              enabledBorder: OutlineInputBorder(
+                borderSide: BorderSide(
+                  color: Color.fromRGBO(255, 144, 15, 1),
+                ),
+                borderRadius: BorderRadius.all(
+                  Radius.circular(30),
+                ),
+              ),
+              focusedBorder: OutlineInputBorder(
+                borderSide: BorderSide(
+                  color: Color.fromARGB(255, 255, 72, 0),
+                ),
+                borderRadius: BorderRadius.all(
+                  Radius.circular(30),
+                ),
+              ),
             ),
           ),
         ),
