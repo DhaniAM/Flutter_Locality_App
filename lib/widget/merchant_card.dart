@@ -5,20 +5,17 @@ import 'package:flutter_project_2/screen/merchant_detail_screen.dart';
 
 class MerchantCard extends StatelessWidget {
   final Merchant merchant;
-  final BuildContext context;
 
   const MerchantCard({
     Key? key,
     required this.merchant,
-    required this.context,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        border:
-            Border.all(color: const Color.fromRGBO(0, 0, 0, 0.3), width: 0.5),
+        border: Border.all(color: const Color.fromRGBO(0, 0, 0, 0.3), width: 0.5),
         borderRadius: BorderRadius.circular(15),
         boxShadow: const <BoxShadow>[
           BoxShadow(
@@ -75,8 +72,7 @@ class MerchantCard extends StatelessWidget {
 
                     /// Merchant Category/Type
                     Padding(
-                      padding:
-                          const EdgeInsets.only(top: 10.0, left: 10, bottom: 0),
+                      padding: const EdgeInsets.only(top: 10.0, left: 10, bottom: 0),
                       child: Text('Type: ${merchant.type}'),
                     ),
 
@@ -91,8 +87,7 @@ class MerchantCard extends StatelessWidget {
                             /// the Tag
                             for (int i = 1; i < 3; i++)
                               Container(
-                                margin:
-                                    const EdgeInsets.only(top: 10, right: 5),
+                                margin: const EdgeInsets.only(top: 10, right: 5),
                                 child: TagCard(
                                   merchant: merchant,
                                   index: i,

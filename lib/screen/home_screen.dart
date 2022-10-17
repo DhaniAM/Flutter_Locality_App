@@ -15,7 +15,6 @@ class HomeScreen extends StatelessWidget {
           padding: const EdgeInsets.only(top: 14, left: 14, right: 14),
           child: MerchantCard(
             merchant: merchant,
-            context: context,
           ),
         );
       },
