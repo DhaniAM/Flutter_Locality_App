@@ -9,8 +9,8 @@ class MyColorPalette extends GetxController {
 }
 
 class RandomCategory extends GetxController {
-  var category = "Food".obs;
-  void setCategory(var name) {
+  RxString category = "Food".obs;
+  void setCategory(String name) {
     category.value = name;
   }
 }
