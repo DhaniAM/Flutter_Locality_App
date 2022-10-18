@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_2/main.dart';
 import 'package:flutter_project_2/screen/account_screen.dart';
 import 'package:flutter_project_2/screen/home_screen.dart';
 import 'package:flutter_project_2/screen/random_screen.dart';

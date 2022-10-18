@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project_2/merchant_data.dart';
+import 'package:flutter_project_2/state/getx.dart';
 import 'package:flutter_project_2/widget/merchant_card.dart';
 
 class SearchScreen extends StatelessWidget {
@@ -39,6 +40,18 @@ class SearchScreen extends StatelessWidget {
                 ),
               ),
             ),
+          ),
+        ),
+        const Padding(
+          padding: EdgeInsets.only(top: 20.0, left: 20),
+          child: Text(
+            'Trending merchant...',
+            style: TextStyle(
+                fontSize: 20,
+                fontStyle: FontStyle.italic,
+                decoration: TextDecoration.underline,
+                decorationColor: Color.fromRGBO(255, 92, 0, 1),
+                decorationThickness: 2),
           ),
         ),
         Column(
