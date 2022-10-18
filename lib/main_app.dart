@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project_2/main.dart';
 import 'package:flutter_project_2/screen/account_screen.dart';
 import 'package:flutter_project_2/screen/home_screen.dart';
 import 'package:flutter_project_2/screen/random_screen.dart';
 import 'package:flutter_project_2/screen/register_merchant_screen.dart';
 import 'package:flutter_project_2/screen/search_screen.dart';
-
-/// Color Palette
-/// Color.fromRGBO(255, 92, 0, 1),
-/// Color.fromRGBO(255, 144, 15, 1),
-/// Color.fromRGBO(255, 202, 15, 1),
-/// Color.fromRGBO(255, 230, 0, 1),
+import 'package:flutter_project_2/state/getx.dart';
+import 'package:get/get.dart';
 
 class MainApp extends StatefulWidget {
   const MainApp({Key? key}) : super(key: key);
@@ -20,10 +17,7 @@ class MainApp extends StatefulWidget {
 
 class _MainAppState extends State<MainApp> {
   int selectedIndex = 0;
-  Color c1 = const Color.fromRGBO(255, 92, 0, 1);
-  Color c2 = const Color.fromRGBO(255, 144, 15, 1);
-  Color c3 = const Color.fromRGBO(255, 202, 15, 1);
-  Color c4 = const Color.fromRGBO(255, 230, 0, 1);
+  final myColor = Get.put(MyColorPalette());
 
   /// for Content Screen, not for the bottomNavBar
   static const List<Widget> _widgetOptions = <Widget>[
@@ -53,7 +47,7 @@ class _MainAppState extends State<MainApp> {
         unselectedItemColor: Colors.white,
         showUnselectedLabels: false,
         selectedIconTheme: const IconThemeData(size: 30),
-        backgroundColor: c2,
+        backgroundColor: myColor.c2,
         currentIndex: selectedIndex,
         type: BottomNavigationBarType.fixed,
         onTap: _onItemTapped,
@@ -85,7 +79,7 @@ class _MainAppState extends State<MainApp> {
           }));
         },
         tooltip: 'Add Menu',
-        foregroundColor: Colors.red,
+        foregroundColor: myColor.c1,
         backgroundColor: Colors.white,
         hoverElevation: 24.6,
         child: const Icon(Icons.add_box_rounded),
