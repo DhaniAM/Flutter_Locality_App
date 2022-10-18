@@ -23,9 +23,12 @@ class RandomScreen extends StatelessWidget {
             top: 150,
             child: PopupMenuButton(
               color: myColor.c1,
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(30),
+                side: const BorderSide(color: Colors.white),
+              ),
               elevation: 5,
-              offset: Offset(25, -100),
+              offset: const Offset(25, -100),
               constraints: const BoxConstraints.expand(width: 150, height: 360),
               child: Container(
                 width: 70,
@@ -34,7 +37,7 @@ class RandomScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(50),
                   color: myColor.c1,
                   boxShadow: <BoxShadow>[
-                    BoxShadow(color: myColor.c3, blurRadius: 2, offset: Offset(0, 1))
+                    BoxShadow(color: myColor.c3, blurRadius: 2, offset: const Offset(0, 1))
                   ],
                 ),
                 child: Center(

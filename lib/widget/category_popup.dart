@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_2/screen/random_screen.dart';
-import 'package:get/get.dart';
 
 enum Category { food, drink, stationary, tech, vehicle, medic, others }
 
