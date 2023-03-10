@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_2/screen/account_screen.dart';
-import 'package:flutter_project_2/screen/home_screen.dart';
-import 'package:flutter_project_2/screen/random_screen.dart';
-import 'package:flutter_project_2/screen/register_merchant_screen.dart';
-import 'package:flutter_project_2/screen/search_screen.dart';
-import 'package:flutter_project_2/state/getx.dart';
 import 'package:get/get.dart';
+import 'package:locality/screen/account_screen.dart';
+import 'package:locality/screen/home_screen.dart';
+import 'package:locality/screen/random_screen.dart';
+import 'package:locality/screen/register_merchant_screen.dart';
+import 'package:locality/screen/search_screen.dart';
+import 'package:locality/state/getx.dart';
 
 class MainApp extends StatefulWidget {
   const MainApp({Key? key}) : super(key: key);

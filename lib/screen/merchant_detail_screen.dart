@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_2/widget/image_detail.dart';
-import 'package:flutter_project_2/widget/tag_card.dart';
-import 'package:flutter_project_2/merchant_data.dart';
+import 'package:locality/merchant_data.dart';
+import 'package:locality/widget/image_detail.dart';
+import 'package:locality/widget/tag_card.dart';
 
 class MerchantDetailScreen extends StatelessWidget {
   final Merchant merchant;

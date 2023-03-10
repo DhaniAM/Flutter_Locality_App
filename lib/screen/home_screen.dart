@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_2/widget/merchant_card.dart';
-import 'package:flutter_project_2/merchant_data.dart';
+import 'package:locality/merchant_data.dart';
+import 'package:locality/widget/merchant_card.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);

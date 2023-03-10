@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_2/merchant_data.dart';
-import 'package:flutter_project_2/state/getx.dart';
-import 'package:flutter_project_2/widget/merchant_card.dart';
+import 'package:locality/merchant_data.dart';
+import 'package:locality/widget/merchant_card.dart';
 
 class SearchScreen extends StatelessWidget {
   const SearchScreen({Key? key}) : super(key: key);

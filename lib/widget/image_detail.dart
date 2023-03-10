@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_2/merchant_data.dart';
-import 'package:flutter_project_2/screen/merchant_detail_screen.dart';
+import 'package:locality/merchant_data.dart';
+import 'package:locality/screen/merchant_detail_screen.dart';
 
 ///Show this when user click any image in [MerchantDetailScreen]
 class ImageDetail extends StatelessWidget {

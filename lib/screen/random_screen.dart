@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_2/state/getx.dart';
 import 'package:get/get.dart';
+import 'package:locality/state/getx.dart';
 
 enum CategoryItem { food, drink }
 
@@ -37,16 +37,23 @@ class RandomScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(50),
                   color: myColor.c1,
                   boxShadow: <BoxShadow>[
-                    BoxShadow(color: myColor.c3, blurRadius: 2, offset: const Offset(0, 1))
+                    BoxShadow(
+                        color: myColor.c3,
+                        blurRadius: 2,
+                        offset: const Offset(0, 1))
                   ],
                 ),
                 child: Center(
                   child: GetX<RandomCategory>(
                     builder: (_) => Text(randomCategory.category.value,
                         style: (randomCategory.category.value != "Stationary")
-                            ? const TextStyle(color: Colors.white, fontWeight: FontWeight.w900)
+                            ? const TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w900)
                             : const TextStyle(
-                                color: Colors.white, fontWeight: FontWeight.w900, fontSize: 10)),
+                                color: Colors.white,
+                                fontWeight: FontWeight.w900,
+                                fontSize: 10)),
                   ),
                 ),
               ),

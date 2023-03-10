@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_2/merchant_data.dart';
-import 'package:flutter_project_2/widget/tag_card.dart';
-import 'package:flutter_project_2/screen/merchant_detail_screen.dart';
+import 'package:locality/merchant_data.dart';
+import 'package:locality/screen/merchant_detail_screen.dart';
+import 'package:locality/widget/tag_card.dart';
 
 class MerchantCard extends StatelessWidget {
   final Merchant merchant;
@@ -17,7 +17,8 @@ class MerchantCard extends StatelessWidget {
       padding: const EdgeInsets.only(top: 14, left: 14, right: 14),
       child: Container(
         decoration: BoxDecoration(
-          border: Border.all(color: const Color.fromRGBO(0, 0, 0, 0.3), width: 0.5),
+          border:
+              Border.all(color: const Color.fromRGBO(0, 0, 0, 0.3), width: 0.5),
           borderRadius: BorderRadius.circular(15),
           boxShadow: const <BoxShadow>[
             BoxShadow(
@@ -74,7 +75,8 @@ class MerchantCard extends StatelessWidget {
 
                       /// Merchant Category/Type
                       Padding(
-                        padding: const EdgeInsets.only(top: 10.0, left: 10, bottom: 0),
+                        padding: const EdgeInsets.only(
+                            top: 10.0, left: 10, bottom: 0),
                         child: Text('Type: ${merchant.type}'),
                       ),
 
@@ -89,7 +91,8 @@ class MerchantCard extends StatelessWidget {
                               /// the Tag
                               for (int i = 1; i < 3; i++)
                                 Container(
-                                  margin: const EdgeInsets.only(top: 10, right: 5),
+                                  margin:
+                                      const EdgeInsets.only(top: 10, right: 5),
                                   child: TagCard(
                                     merchant: merchant,
                                     index: i,
